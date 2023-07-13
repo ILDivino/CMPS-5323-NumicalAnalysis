@@ -13,9 +13,9 @@
 
 
 #Our Data
-x = [2,5,7,10,14,19,26,31,34,38,45,52,53,60,65]
+x = [1900,1910,1920,1930,1940,1950,1960,1970,1980,1990,2000,2010]
 #y is for raw data and graphing but is not used in any formula.
-y = [54,50,45,37,35,25,20,16,18,13,8,11,8,4,6]
+y = [43.7,50,54.1,59.7,62.9,68.2,69.7,70.8,73.7,75.4,76.8,78.7]
 #y_prime the y used in all formula. y_prime = ln(y)
 y_prime = log(y)
 
@@ -40,22 +40,22 @@ Lxx = N*Sum_X2-power(Sum_X,2)
 Lyy = N*Sum_Y2-power(Sum_Y,2)
 #now for B, A, and the equation
 disp("\nB,A, and Equation!!!!\n")
-B = Sxy/Sxx #also M_prime for linear
+B = Lxy/Lxx #also M_prime for linear
 B_prime = Mean_Y - (B * Mean_X)
 A = exp(B_prime)
-printf("Our linear question is: y = (%d)x+%d",B, B_prime)
+printf("Our linear question is: ln(y) = (%d)x+%d",B, B_prime)
 printf("Our exponential equation is: y = %dE^%dx",A, B)
 #now for R value
 disp("\nR-Value:\n")
-R = Sxy / (sqrt(Sxx)*sqrt(Syy))
+R = Lxy / (sqrt(Lxx)*sqrt(Lyy))
 #Now to add plotting this out.
 #Even for testing I don't care to output this so it will have the ;
-#y2 = B * x + B_prime #linear representation
-y2 = A.*exp(B.*x);
+y2 = B * x + B_prime #linear representation
+#y2 = A.*exp(B.*x); #exponential representation
 #we are plotting the initial x,y data as red circles 'or'
 #Our new equation will be plotted as a regular line x,y2
-#plot(x,y,'or',x,exp(y2)) #linear representation
-plot(x,y,'or',x,y2)
+plot(x,y,'or',x,exp(y2)) #linear representation
+#plot(x,y,'or',x,y2) #exponential representation
 xlabel("X Units")
 ylabel("Y Units")
 title(sprintf("Exponential Regression. R = %d",R))
