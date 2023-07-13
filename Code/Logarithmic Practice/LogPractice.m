@@ -34,3 +34,15 @@ printf("Our equation is: y = %dln(x) + %d",B, A)
 #now for R value
 disp("\nR-Value:\n")
 R = Sxy/(Sxx * Syy)
+#Now to add plotting this out.
+#Even for testing I don't care to output this so it will have the ;
+y2 = B.*log(x) + A;
+#we are plotting the initial x,y data as red circles 'or'
+#Our new equation will be plotted as a regular line x,y2
+plot(x,y,'or',x,y2)
+xlabel("X Units")
+ylabel("Y Units")
+title(sprintf("Logarithmic Regression. R = %d",R))
+grid on
+legend('data points', 'line derived')
+set(gca, "linewidth", 2, "fontsize", 20)

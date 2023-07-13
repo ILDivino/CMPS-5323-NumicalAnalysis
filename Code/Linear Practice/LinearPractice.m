@@ -30,8 +30,19 @@ Lyy = N*Sum_Y2-power(Sum_Y,2)
 disp("\nB,M, and Equation!!!!\n")
 M = Lxy / Lxx
 B = Mean_Y - (M * Mean_X)
-printf("Our equation is: y = %dx + %d",B, A)
+printf("Our equation is: y = %dx + %d",M, B)
 #now for R value
 disp("\nR-Value:\n")
 R = Lxy / (sqrt(Lxx)*sqrt(Lyy))
-
+#Now to add plotting this out.
+#Even for testing I don't care to output this so it will have the ;
+y2 = M.*x + B;
+#we are plotting the initial x,y data as red circles 'or'
+#Our new equation will be plotted as a regular line x,y2
+plot(x,y,'or',x,y2)
+xlabel("X Units")
+ylabel("Y Units")
+title(sprintf("Linear Regression. R =%d",R))
+grid on
+legend('data points', 'line derived')
+set(gca, "linewidth", 2, "fontsize", 20)
