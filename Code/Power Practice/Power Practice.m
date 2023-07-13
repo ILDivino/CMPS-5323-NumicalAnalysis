@@ -1,5 +1,5 @@
 #Michael Ellerkamp, NumAnalysis
-#Exponential Regression file
+#Power Regression file
 
 # x = ln(x)
 # y = ln(y) in all instances except the raw data, when we think back to our formulas
