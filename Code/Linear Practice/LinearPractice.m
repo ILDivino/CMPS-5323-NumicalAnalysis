@@ -42,7 +42,7 @@ y2 = M.*x + B;
 plot(x,y,'or',x,y2)
 xlabel("X Units")
 ylabel("Y Units")
-title(sprintf("Linear Regression. R =%d",R))
+title(sprintf("Linear Regression. R = %d",R))
 grid on
 legend('data points', 'line derived')
 set(gca, "linewidth", 2, "fontsize", 20)
