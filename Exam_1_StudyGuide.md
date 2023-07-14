@@ -19,14 +19,14 @@ $r = \zeta_{X,Y} / (\zeta_{X,X} * \zeta_{Y,Y})$
 x = x  
 y = ln(y)  
 $\zeta_{A,B} = \sum_{i=1}^{N}(A*B) - N * \bar{A} * \bar{B}$  
-$\beta = \zeta_{x,y} / \zeta_{x,x}$
-$A = e^{\bar{y} - \beta * \bar{x}}$
+$\beta = \zeta_{x,y} / \zeta_{x,x}$  
+$A = e^{\bar{y} - \beta * \bar{x}}$  
 $r = \zeta_{X,Y} / (\sqrt{\zeta_{X,X}} * \sqrt{\zeta_{Y,Y}})$  
 ## AB Exponential $y = A * \beta ^{x}$
 x = x  
 y = ln(y)  
 $\zeta_{A,B} = \sum_{i=1}^{N}(A*B) - N * \bar{A} * \bar{B}$  
-$\beta = e^{\zeta_{X,Y} / \zeta_{X,X}}$
+$\beta = e^{\zeta_{X,Y} / \zeta_{X,X}}$  
 $A = e^{\bar{y} - (\zeta_{X,Y} / \zeta_{X,X}) * \bar{x}}$  
 $r = \zeta_{X,Y} / (\sqrt{\zeta_{X,X}} * \sqrt{\zeta_{Y,Y}})$  
 ## Exponential Data Transformation $ln(y) = ln(A) + \beta x$ -> $y' = b' + m'x$
@@ -34,7 +34,7 @@ x = x
 y = ln(y) //pay special attention to the linear formulation.  
 $L_{A,B} = N * \sum_{i=1}^{N}(A*B) - \sum_{i=1}^{N}A * \sum_{i=1}^{N}B$  
 $m' = L_{x,y} / L_{x,x}$  
-$b' = \bar{y} - m' * \bar{x}$  //remember y = ln(y)
+$b' = \bar{y} - m' * \bar{x}$  //remember y = ln(y)  
 $r = \zeta_{X,Y} / (\sqrt{\zeta_{X,X}} * \sqrt{\zeta_{Y,Y}})$  
 ## Power $y = A * x ^{\beta}$
 x = ln(x)  
