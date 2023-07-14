@@ -1,6 +1,5 @@
 #### Study Guide for Exam 1
 
-### Base values per method
 ## Linear $y = mx + b$
 x = x  
 y = y  
