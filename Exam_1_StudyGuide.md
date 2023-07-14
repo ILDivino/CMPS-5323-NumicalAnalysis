@@ -7,7 +7,7 @@ $L_{A,B} = N * \sum_{i=1}^{N}(A*B) - \sum_{i=1}^{N}A * \sum_{i=1}^{N}B$
 $m = L_{x,y} / L_{x,x}$  
 $b = \bar{y} - m * \bar{x}$  
 $r = L_{X,Y} / (\sqrt{L_{X,X}} * \sqrt{L_{Y,Y}})$  
-## Logarthmic $y = \beta x + A$
+## Logarthmic $y = \beta * ln(x) + A$
 x = ln(x)  
 y = y  
 $\zeta_{A,B} = \sum_{i=1}^{N}(A*B) - N * \bar{A} * \bar{B}$  
