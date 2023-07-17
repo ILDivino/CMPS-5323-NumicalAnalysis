@@ -43,7 +43,7 @@ disp("\nB,A, and Equation!!!!\n")
 B = Lxy/Lxx #also M_prime for linear
 B_prime = Mean_Y - (B * Mean_X)
 A = exp(B_prime)
-printf("Our linear question is: ln(y) = (%d)x+%d",B, B_prime)
+printf("Our linear question is: ln(y) = (%d)x+%d\n",B, B_prime)
 printf("Our exponential equation is: y = %dE^%dx",A, B)
 #now for R value
 disp("\nR-Value:\n")

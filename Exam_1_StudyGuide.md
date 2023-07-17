@@ -34,13 +34,14 @@ y = ln(y) //pay special attention to the linear formulation.
 $L_{A,B} = N * \sum_{i=1}^{N}(A*B) - \sum_{i=1}^{N}A * \sum_{i=1}^{N}B$  
 $m' = L_{x,y} / L_{x,x}$  
 $b' = \bar{y} - m' * \bar{x}$  //remember y = ln(y)  
+$A = e^{b'}$  
 $r = \zeta_{X,Y} / (\sqrt{\zeta_{X,X}} * \sqrt{\zeta_{Y,Y}})$  
 ## Power $y = A * x ^{\beta}$
 x = ln(x)  
 y = ln(y)  
 $\zeta_{A,B} = \sum_{i=1}^{N}(A*B) - N * \bar{A} * \bar{B}$  
 $\beta = \zeta_{x,y} / \zeta_{x,x}$  
-$A = \bar{y} - \beta * \bar{x}$  
+$A = e^{\bar{y} - \beta * \bar{x}}$  
 $r = \zeta_{X,Y} / (\sqrt{\zeta_{X,X}} * \sqrt{\zeta_{Y,Y}})$  
 ## $L_{A,B}$ vs $\zeta_{A,B}$ :
 $L_{A,B} = N * \sum_{i=1}^{N}(A*B) - \sum_{i=1}^{N}A * \sum_{i=1}^{N}B$  
