@@ -13,7 +13,7 @@ y = y
 $\zeta_{A,B} = \sum_{i=1}^{N}(A*B) - N * \bar{A} * \bar{B}$  
 $\beta = \zeta_{x,y} / \zeta_{x,x}$  
 $A = \bar{y} - \beta * \bar{x}$  
-$r = \zeta_{X,Y} / (\zeta_{X,X} * \zeta_{Y,Y})$  
+$r = \zeta_{X,Y} / (\sqrt{\zeta_{X,X}} * \sqrt{\zeta_{Y,Y}})$  
 ## Exponential $y = A * e^{\beta x}$
 x = x  
 y = ln(y)  
@@ -55,5 +55,4 @@ $b = \bar{y} - m * \bar{x}$
 $A = \bar{y} - \beta * \bar{x}$  
 $A = e^{\bar{y} - (\zeta_{X,Y} / \zeta_{X,X}) * \bar{x}}$  
 ## r value formulas //replace \zeta with L for any formula.
-$r = \zeta_{X,Y} / (\zeta_{X,X} * \zeta_{Y,Y})$  
 $r = \zeta_{X,Y} / (\sqrt{\zeta_{X,X}} * \sqrt{\zeta_{Y,Y}})$  
