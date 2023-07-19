@@ -1,5 +1,5 @@
 #Michael Ellerkamp, NumAnalysis
-#Power Regression file
+#Power Data Transformation Regression file
 
 # x = ln(x)
 # y = ln(y) in all instances except the raw data, when we think back to our formulas
@@ -32,11 +32,12 @@ disp("\nB,A, and Equation!!!!\n")
 B = Sxy/Sxx
 A = exp(Mean_LnY - B*Mean_LnX)
 printf("Our equation is: y = %dx^%d\n",A, B)
-#now for b', m', and the linear equation
+#now for b', m', x', and the linear equation
 disp("\nB,A, and Equation!!!!\n")
 m_prime = B  #m' and B are the exact same
 b_prime = Mean_LnY - B*Mean_LnX #b' is the ln(A)
-printf("Our equation is: y = %dx + %d",m_prime, b_prime)
+x_prime = log(x); #I don't care to show this off but important to know
+printf("Our equation is: y = %dx' + %d",m_prime, b_prime)
 #now for R value
 disp("\nR-Value:\n")
 R = Sxy / (sqrt(Sxx)*sqrt(Syy))
@@ -44,7 +45,8 @@ R = Sxy / (sqrt(Sxx)*sqrt(Syy))
 #Even for testing I don't care to output this so it will have the ;
 
 #y2 = A.*power(x,B); #power version.
-y2 = (log(m_prime) * x) + b_prime #linear version
+y2 = (m_prime * x_prime) + b_prime #linear version
+#in the linear form x is actually x_prime and x_prime = log(x)
 
 #we are plotting the initial x,y data as red circles 'or'
 #Our new equation will be plotted as a regular line x,y2
