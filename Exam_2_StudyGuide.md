@@ -26,6 +26,7 @@ $
 \sum_{i=1}^{N}(y*x^2)
 \end{array}\right)
 $  
+Matrix B contains the '$a_i$' values.  
 Matrix B = A\C, inv(A)/C or user determinates to solve  
 $Sr = \sum_{i=1}^{N}((y_i - a_0 - (a_1 * x_i) - (a_2 * x_i^2))^2)$  
 $S_{YX} = \sqrt{Sr/(n-(m+1))}$  
