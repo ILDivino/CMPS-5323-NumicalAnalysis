@@ -5,8 +5,8 @@
 # y = ln(y) in all instances except the raw data, when we think back to our formulas
 
 #Our Data
-x = [2,5,7,10,14,19,26,31,34,38,45,52,53,60,65]
-y = [54,50,45,37,35,25,20,16,18,13,8,11,8,4,6]
+x = [10,16,25,40,60]
+y = [94,118,147,180,230]
 
 #Important that x and y have the same length, do not make me have to implement error detection!!!
 disp("\nData!!!\n")
@@ -27,20 +27,30 @@ disp("\nS functions!!!\n")
 Sxy = Sum_LnXLnY - N*Mean_LnX*Mean_LnY
 Sxx = Sum_LnX2 - N*power(Mean_LnX,2)
 Syy = Sum_LnY2 - N*power(Mean_LnY,2)
-#now for B, A, and the equation
+#now for B, A, and the Power equation
 disp("\nB,A, and Equation!!!!\n")
 B = Sxy/Sxx
 A = exp(Mean_LnY - B*Mean_LnX)
-printf("Our equation is: y = %dx^%d",A, B)
+printf("Our equation is: y = %dx^%d\n",A, B)
+#now for b', m', and the linear equation
+disp("\nB,A, and Equation!!!!\n")
+m_prime = B  #m' and B are the exact same
+b_prime = Mean_LnY - B*Mean_LnX #b' is the ln(A)
+printf("Our equation is: y = %dx + %d",m_prime, b_prime)
 #now for R value
 disp("\nR-Value:\n")
 R = Sxy / (sqrt(Sxx)*sqrt(Syy))
 #Now to add plotting this out.
 #Even for testing I don't care to output this so it will have the ;
-y2 = A.*power(x,B);
+
+#y2 = A.*power(x,B); #power version.
+y2 = (log(m_prime) * x) + b_prime #linear version
+
 #we are plotting the initial x,y data as red circles 'or'
 #Our new equation will be plotted as a regular line x,y2
-plot(x,y,'or',x,y2)
+#plot(x,y,'or',x,y2) #plotting power formula
+plot(x,y,'or',x,exp(y2)) #plotting linear formula
+
 xlabel("X Units")
 ylabel("Y Units")
 title(sprintf("Power Regression. R = %d",R))
