@@ -27,7 +27,7 @@ $
 \end{array}\right)
 $  
 Matrix B = A\C, inv(A)/C or user determinates to solve  
-$Sr = sum_{i=1}^{N}((y_i - a_0 - (a_1 * x_i) - (a_2 * x_i^2))^2)$  
+$Sr = \sum_{i=1}^{N}((y_i - a_0 - (a_1 * x_i) - (a_2 * x_i^2))^2)$  
 $S_{YX} = \sqrt{Sr/(n-(m+1))}$  
 $R^2 =(\zeta_{y,y}^2 - SR)/\zeta_{y,y}^2$  
 $R = \sqrt{R^2}$
