@@ -22,7 +22,8 @@ Mean_Y = mean(y)/N
 #Finding Matrix A, C, and B
 A = [N, Sum_X, Sum_X2; Sum_X, Sum_X2, Sum_X3; Sum_X2, Sum_X3, Sum_X4]
 C = [Sum_Y;Sum_XY;Sum_X2Y]
-B = A\C #left division, inv(A)/C, useful as it creates a minimum norm solution
+B = A\C #left division, inv(A)*C, useful as it creates a minimum norm solution
+#B = inv(A)*C
 #Equation
 printf("Our equation is: y = %d + %dx + %dx^2\n",B(1), B(2), B(3))
 #Finding Sr
