@@ -25,9 +25,9 @@ x = [X_L, X_U];
 #Important loop variables for exiting.
 Iter = 0;
 E_s = 0.05;
-Root = false;
 #For E_s calculations
 X_M = (X_L + X_U)/2;
+F_X_L = (668.07/X_L)*(1-e^-0.1468437) - 40;
 E_a = 100;
 do
   X_M_Old = X_M;
@@ -37,7 +37,6 @@ do
   X_L
   X_U
   X_M = (X_L + X_U)/2
-  F_X_L = (668.07/X_L)*(1-e^-0.1468437) - 40;
   F_X_M = (668.07/X_M)*(1-e^-0.1468437) - 40;
   if(Iter > 1)
     E_a = abs((X_M - X_M_Old)/X_M) * 100
@@ -48,8 +47,10 @@ do
   elseif(F_X_L * F_X_M > 0)
     #X_U stays X_U
     X_L = X_M;
+    #F_X_L only updates on this conditional, no point in recalculating it every iteration.
+    F_X_L = (668.07/X_L)*(1-e^-0.1468437) - 40;
   else
     E_a = 0;
   endif
- until(F_X_L * F_X_M == 0 || Iter == Max_Iter || E_a < E_s)
+ until(Iter == Max_Iter || E_a < E_s)
  E_s

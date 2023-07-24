@@ -12,7 +12,9 @@ X_L =0;
 #upper bound
 X_U = 1.3;
 #mid point
-X_R = X_U - ( (power(X_U,10)-1) * (X_L - X_U) ) / ( (power(X_L,10)-1) - (power(X_U,10)-1) );
+F_X_L = power(X_L,10)-1;
+F_X_U = power(X_U,10)-1;
+X_R = X_U - ( F_X_U * (X_L - X_U) ) / (F_X_L - F_X_U);
 #maximum # of iterations, default some large number
 #as I don't want to be stuck in an infinite loop
 #else, put in your desired number here, but always have a number here.
@@ -25,7 +27,6 @@ x = [X_L, X_U];
 #Important loop variables for exiting.
 Iter = 0;
 E_s = 0.05;
-Root = false;
 #For E_s calculations
 E_a = 1;
 do
@@ -36,8 +37,7 @@ do
 
   X_L
   X_U
-  X_R = X_U - ( (power(X_U,10)-1) * (X_L - X_U) ) / ( (power(X_L,10)-1) - (power(X_U,10)-1) )
-  F_X_L = power(X_L,10)-1;
+  X_R = X_U - ( F_X_U * (X_L - X_U) ) / (F_X_L - F_X_U)
   F_X_R = power(X_R,10)-1;
   if(Iter > 1)
     E_a = abs((X_R - X_R_Old)/X_R)

@@ -5,8 +5,8 @@
 # y = ln(y) in all instances except the raw data, when we think back to our formulas
 
 #Our Data
-x = [10,16,25,40,60]
-y = [94,118,147,180,230]
+x = [1,3,4,6,7]
+y = [1,2,2,5,8]
 
 #Important that x and y have the same length, do not make me have to implement error detection!!!
 disp("\nData!!!\n")
