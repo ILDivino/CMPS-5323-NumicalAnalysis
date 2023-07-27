@@ -10,7 +10,7 @@ disp("\nIteration #1\n")
 #Initial Guess
 x = [0, 3]
 #X is put into a matrix as I plan to add to the matrix and call the iterations
-
+y = exp(-x) - x
 #maximum # of iterations, default some large number
 #as I don't want to be stuck in an infinite loop
 #else, put in your desired number here, but always have a number here.
