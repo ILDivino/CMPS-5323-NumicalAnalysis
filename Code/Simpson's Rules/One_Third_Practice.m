@@ -26,10 +26,9 @@ E_s = 0;
 #For E_s calculations
 E_a = 1;
 
+y = exp( -x(1)) + 1
 x(1) + Delta_X
-y = exp( -(x(1) + (Delta_X))) + 1
-x(1) + Delta_X
-y2 = exp( -(x(1) + (Delta_X * Iter)) ) + 1
+y2 = exp( -(x(1) + Delta_X) ) + 1
 x(2)
 y3 = exp( -x(2) ) + 1
 I += y + (4*y2) + y3
