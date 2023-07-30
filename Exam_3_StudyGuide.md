@@ -23,6 +23,11 @@ $I = H * (f(a) + 2f(a + \Delta x) ...... + 2f(a + \Delta x * N-1) + f(a * \Delta
 $a + \Delta x * N = b$
 ## Simpson Rule's
 #### 1/3 rule
+$\Delta x = (b-a)/2$  
+$H = \Delta x / 3$  
+$I = H * (f(a) + 4f(x_i + \Delta x) + f(a *\Delta x * 2))$  
+$a + \Delta x * 2 = b$  
+#### Multiple Application 1/3 rule
 N must be even.  
 $\Delta x = (b-a)/N$  
 $H = \Delta x / 3$  
