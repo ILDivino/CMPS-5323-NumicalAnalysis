@@ -11,7 +11,7 @@ disp("\ny = x^3 - 2x^2 + x")
 
 #initial varibles: N and Range.
 #N, number of segments. Must be 1+
-N = 1
+N = 4
 #Initial Guess
 x = [1,7]
 #Delta X is (B-A)/N
