@@ -2,7 +2,7 @@
 #Euler's Method file
 #Differential Equations
 #Getting into Octave functions
-a = 0;
+a = 1;
 b = 0;
 function result = Euler_Method (a, b)
     result = 3* exp(-a) - 0.4 * b;
