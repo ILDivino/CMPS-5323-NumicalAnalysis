@@ -2,11 +2,7 @@
 #Euler's Method file
 #Differential Equations
 #Getting into Octave functions
-a = 1;
-b = 0;
-function result = Euler_Method (a, b)
-    result = 3* exp(-a) - 0.4 * b;
-endfunction
+
 #used to solve partial differential equations
 #dy/dx + 0.4y = 3e^{-x} ; given value: y(0) = 5
 #dy/dx = 3e^{-x} - 0.4y ;; target:find y(x) =
@@ -39,7 +35,7 @@ MaxIter = N;
 do
   Iter += 1;
   printf("Iteration #%d!\n", Iter)
-  result = Euler_Method(X(Iter),Y(Iter))
+  result = Function_XY(X(Iter),Y(Iter))
   x = H * Iter
   y = Y(Iter) + result * H
   Y = [Y y];
