@@ -42,5 +42,5 @@ $k_4 = f(x_{i} + h, y_i + k_{3}h)$
 ### Do this formula for both inner x values. i=2 and i=3.  
 $\huge (x_{i}-x_{i-1})f''(x_{i-1}) + 2(x_{i+1}-x_{i-1})f''(x_i) + (x_{i+1}-x_i)f''(x_{i+1}) = \frac{6}{x_{i+1}-x_i}[f(x_{i+1})-f(x_i)] + \frac{6}{x_{i}-x_{i-1}}[f(x_{i-1})-f(x_i)]$  
 ### Use the two formulas to solve for $f''(x_2)$ and $f''(x_3)$
-### Determine which interval the target value is located in and use the proper $f''(x_i)$ values for the lower and upper bound of that interval for the following equation.
+### Determine which interval the target value is located in and use the proper $f''(x_i)$ values for the lower and upper bound of that interval for the following equation.  
 $\huge f_{i}(x) = \frac{f''(x_{i-1})}{6(x_{i}-x_{i-1})}(x_{i}-x)^3 + \frac{f''(x_{i})}{6(x_{i}-x_{i-1})}(x-x_{i-1})^3 + [\frac{f(x_{i-1})}{x_{i}-x_{i-1}}-\frac{f''(x_{}i-1)(x_{i}-x_{i-1})}{6}](x_{i}-x) + [\frac{f(x_{i})}{x_{i}-x_{i-1}}-\frac{f''(x_i)(x_{i}-x_{i-1})}{6}](x-x_{i-1})$  
