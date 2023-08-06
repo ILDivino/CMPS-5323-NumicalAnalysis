@@ -36,11 +36,11 @@ F_double_derive = [0, B(1), B(2), 0]
 
 #target is in the first interval.
 if(x<X(2))
-F_X = Base_Function(F_double_derive, X, Y, 5, 1)
+F_X = Base_Function(F_double_derive, X, Y, x, 1)
 #target is in the second interval
 elseif(x<X(3))
-F_X = Base_Function(F_double_derive, X, Y, 5, 2)
+F_X = Base_Function(F_double_derive, X, Y, x, 2)
 #target is in the last interval
 else
-F_X = Base_Function(F_double_derive, X, Y, 5, 3)
+F_X = Base_Function(F_double_derive, X, Y, x, 3)
 endif
