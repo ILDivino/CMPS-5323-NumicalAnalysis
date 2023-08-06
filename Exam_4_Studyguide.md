@@ -3,13 +3,13 @@
 # Interpolations
 ## Linear Interpolation:
 ### Needs 2 data points
-$f(x) = f(x_0) + \frac{f(x_1) - f(x_0)}{x_1 - x_0} * (x - x_0)$ 
+$\huge f(x) = f(x_0) + \frac{f(x_1) - f(x_0)}{x_1 - x_0} * (x - x_0)$ 
 ## Quadratic Interpolation:
 ### Needs 3 data points
 #### B formula:
-$b_0 = f(x_0)$  
-$b_1 = \frac{f(x_1) - f(x_0)}{x_1 - x_0}$  
-$b_2 = \frac{\frac{f(x_2) - f(x_1)}{x_2 - x_1} - \frac{f(x_1) - f(x_0)}{x_1 - x_0}}{x_2 - x_0}$  
+$\huge b_0 = f(x_0)$  
+$\huge b_1 = \frac{f(x_1) - f(x_0)}{x_1 - x_0}$  
+$\huge b_2 = \frac{\frac{f(x_2) - f(x_1)}{x_2 - x_1} - \frac{f(x_1) - f(x_0)}{x_1 - x_0}}{x_2 - x_0}$  
 #### A formula:
 $a_0 = b_0 - b_1 * x_0 + b_2 * x_0 * x_1$  
 $a_1 = b_1 - b_2 * x_0 - b_2 * x_1$  
@@ -40,7 +40,7 @@ $k_4 = f(x_{i} + h, y_i + k_{3}h)$
 ## Formula
 ### f_{''}(x) = 0, for the first and last x value.
 ### Do this formula for both inner x values. i=2 and i=3.  
-$(x_{i}-x_{i-1})f_{''}(x_{i-1}) + 2(x_{i+1}-x_{i-1})f_{2}(x_i) + (x_{i+1}-x_i)f_{''}(x_{i+1}) = \frac{6}{x_{i+1}-x_i}[f(x_{i+1})-f(x_i)] + \frac{6}{x_{i}-x_{i-1}}[f(x_{i-1})-f(x_i)]$  
-### Use the two formulas to solve for $f_{''}(x_2)$ and $f_{''}(x_3)$
-### Determine which interval the target value is located in and use the proper $f_{''}(x_i)$ values for the lower and upper bound of that interval for the following equation.
-$f_{i}(x) = \frac{f_{''}(x_{i-1})}{6(x_{i}-x_{i-1})}(x_{i}-x)^3 + \frac{f_{''}(x_{i})}{6(x_{i}-x_{i-1})}(x-x_{i-1})^3 + [\frac{f(x_{i-1})}{x_{i}-x_{i-1}}-\frac{f_{''}(x_{}i-1)(x_{i}-x_{i-1})}{6}](x_{i}-x) + [\frac{f(x_{i})}{x_{i}-x_{i-1}}-\frac{f_{''}(x_i)(x_{i}-x_{i-1})}{6}](x-x_{i-1})$  
+$\huge (x_{i}-x_{i-1})f''(x_{i-1}) + 2(x_{i+1}-x_{i-1})f''(x_i) + (x_{i+1}-x_i)f''(x_{i+1}) = \frac{6}{x_{i+1}-x_i}[f(x_{i+1})-f(x_i)] + \frac{6}{x_{i}-x_{i-1}}[f(x_{i-1})-f(x_i)]$  
+### Use the two formulas to solve for $f''(x_2)$ and $f''(x_3)$
+### Determine which interval the target value is located in and use the proper $f''(x_i)$ values for the lower and upper bound of that interval for the following equation.
+$\huge f_{i}(x) = \frac{f''(x_{i-1})}{6(x_{i}-x_{i-1})}(x_{i}-x)^3 + \frac{f''(x_{i})}{6(x_{i}-x_{i-1})}(x-x_{i-1})^3 + [\frac{f(x_{i-1})}{x_{i}-x_{i-1}}-\frac{f''(x_{}i-1)(x_{i}-x_{i-1})}{6}](x_{i}-x) + [\frac{f(x_{i})}{x_{i}-x_{i-1}}-\frac{f''(x_i)(x_{i}-x_{i-1})}{6}](x-x_{i-1})$  
