@@ -38,7 +38,7 @@ $k_4 = f(x_{i} + h, y_i + k_{3}h)$
 ## Cubic Splices
 ### Need 4 sets of data, (x,y)
 ## Formula
-### f_{''}(x) = 0, for the first and last x value.
+### $f''(x) = 0$, for the first and last x value.
 ### Do this formula for both inner x values. i=2 and i=3.  
 $\huge (x_{i}-x_{i-1})f''(x_{i-1}) + 2(x_{i+1}-x_{i-1})f''(x_i) + (x_{i+1}-x_i)f''(x_{i+1}) = \frac{6}{x_{i+1}-x_i}[f(x_{i+1})-f(x_i)] + \frac{6}{x_{i}-x_{i-1}}[f(x_{i-1})-f(x_i)]$  
 ### Use the two formulas to solve for $f''(x_2)$ and $f''(x_3)$
