@@ -12,14 +12,14 @@ disp("\ny = ln(x)")
 #B(1) = a(0), B(2) = a(1), B(3) = a(2)
 #initial varibles: N and Range.
 #Initial Guess
-x = [1,4,6]
+x = [1,3,5]
 
 #X = target value for interpolation
 X = 2
 #Bunch of handy starting variables.
-F_x_0 = log(x(1))
-F_x_1 = log(x(2))
-F_x_2 = log(x(3))
+F_x_0 = 0
+F_x_1 = 4
+F_x_2 = 8
 #All equations.
 #F_2(x) = a_0 + a_1 * x + a_2 * x^2
 

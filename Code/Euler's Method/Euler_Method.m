@@ -12,7 +12,7 @@
 
 display("y_{i+1} = y_i + f(x_i , y_i) * H\n")
 
-N = 5
+N = 3
 
 #equation, given, and target.
 #These matrices are where I will store all my x and y values for recall.
@@ -21,11 +21,11 @@ Y = [];
 
 display("Given Values!\n")
 x = 0;
-y = 5;
+y = 1;
 X = [X x]
 Y = [Y y]
 
-x = 3;
+x = 1.5;
 printf("Target Value! f(%d) = ?\n", x)
 
 H = (x-X(1)) / N
