@@ -22,7 +22,8 @@ display("All x values are given to us as to ensure we have uneven segments.\n")
 x = [0.0, 0.12, 0.22, 0.32, 0.36, 0.40, 0.44, 0.54, 0.64, 0.70, 0.80]
 y = [];
 h = [];
-display("We ought to plus each of these into our starting equation to get our f(x), y, values.\n")
+display("We ought to put each of these into our starting equation to get our f(x), y, values.\n")
+#filling up our f(x), y table
 for i = 1:length(x)
   printf("f(x_%d) = \n", i)
   F_X = Function_X(x(i))
@@ -45,6 +46,8 @@ h
 display("Now we plug in our h and our f(x) values into our equation to solve for I.\n")
 display("For learning sake we will do this per interval.\n")
 I = 0;
+#our equation is very simple and can be processed in chunks that is what this is doing.
+#processing an interval at a time until we process all intervals.
 for i = 1:length(h)
   Interval_Area = h(i) * (y(i) + y(i+1))/2
   I = I + Interval_Area

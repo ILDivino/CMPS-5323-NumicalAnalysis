@@ -24,6 +24,7 @@ x = [0.00, 0.12, 0.22, 0.32, 0.36, 0.40, 0.44, 0.54, 0.64, 0.70, 0.80]
 y = [];
 h = [];
 display("We ought to plus each of these into our starting equation to get our f(x), y, values.\n")
+#filling up our f(x), y table
 for i = 1:length(x)
   printf("f(x_%d) = \n", i)
   F_X = Function_X(x(i))
@@ -53,6 +54,13 @@ i = 1;
 #comparisons are weird and I am getting extremely small errors causing comparisons to fail.
 #so I am adding a tolerance to remove this.
 TOLERANCE = 0.000001
+#we are going to process our intervals using the h table as our main focus.
+#this is important as we now have to look into the future h values to see if we find matching.
+#values as that will determine what kind of equation we use to process the area of the intervals involved.
+#if we find a 3/8 or 1/3 rule we will increase the value of i more than once in order to move past the matching values
+#we have already processed.
+#k is to index future h values.
+#j is to keep track of how many matching consecutive values we find.
 while i <= length(h)
   i
   current_h = h(i);
