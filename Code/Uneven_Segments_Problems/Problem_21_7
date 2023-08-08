@@ -37,8 +37,8 @@ $f(0.12) = 0.2 + 3 - 2.88 + 1.1664 - 0.186624 + 0.009953$
 $f(0.12) = 1.309729$  
 Repeat to populate table for easier referencing.  
 
-Now we have our heights (x's) and our f(x) values.  
-In the past we would find a even height and then multiply the sum of all the intervals togethers, inner intervals being multiplied by 2. After that we would divide by the height.  
+Now we have our heights (f(x)'s) and our x values.  
+In the past we would have an even height and then multiply the sum of all the intervals togethers, inner intervals being multiplied by 2. After that we would divide by the height.  
 $I = \frac{h}{2}(f(x_0) + 2f(x_0 + h) + 2f(x_0 + 2h) + ... + f(x_o + n*h))$  
 Since we have unevent intervals, it is better to just take each pair of f(x)'s that serve as the boundary of each interval and multiply them by the heigh (h)/2.  
 
