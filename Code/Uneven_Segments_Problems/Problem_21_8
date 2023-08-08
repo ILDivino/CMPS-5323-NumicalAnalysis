@@ -3,9 +3,9 @@
 #### Inclusion of Simpson's Rules in the Evaluation of Uneven Data
 
 ## Base Data from example 21.1.
-<p>$f(x)=0.2+25x-200x^{2}+675x^{3}-900x^{4}+400x^{5}$
+$f(x)=0.2+25x-200x^{2}+675x^{3}-900x^{4}+400x^{5}$
 From x = 0 to x=0.8
-Exact value is 1.640533</p>
+Exact value is 1.640533
 
 ### Old Equation!!
 $\huge I = h_1 * (\frac{f(x_0)+f(x_1)}{2}) + h_2 * (\frac{f(x_1)+f(x_2)}{2}) + h_3 * (\frac{f(x_2)+f(x_3)}{2}) +....+ h_n * (\frac{f(x_{n-1})+f(x_n)}{2})$ 
