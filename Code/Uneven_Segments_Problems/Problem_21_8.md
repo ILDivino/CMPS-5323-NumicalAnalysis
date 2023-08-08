@@ -8,7 +8,7 @@ From x = 0 to x=0.8
 Exact value is 1.640533
 
 ### Old Equation!!
-$\huge I = h_1 * (\frac{f(x_0)+f(x_1)}{2}) + h_2 * (\frac{f(x_1)+f(x_2)}{2}) + h_3 * (\frac{f(x_2)+f(x_3)}{2}) +....+ h_n * (\frac{f(x_{n-1})+f(x_n)}{2})$ 
+$I = h_1 * (\frac{f(x_0)+f(x_1)}{2}) + h_2 * (\frac{f(x_1)+f(x_2)}{2}) + h_3 * (\frac{f(x_2)+f(x_3)}{2}) +....+ h_n * (\frac{f(x_{n-1})+f(x_n)}{2})$ 
 
 ### New tools
 We will be taking this old equation and adding two new features to it.
@@ -54,18 +54,20 @@ $h_2 = \Delta x$ of the second interval. Second and third x value.
 $h_3 = \Delta x$ of the third interval. Third and fourth x value.  
 Repeat for all x values.
 h table:  
-|$h_i$|$\Delta X$|
-|-|-|
-|1|0.12|
-|2|0.10|
-|3|0.10|
-|4|0.04|
-|5|0.04|
-|6|0.04|
-|7|0.10|
-|8|0.10|
-|9|0.06|
-|10|0.10|
+
+|$h_i$|$\Delta X$|  
+|-|-|  
+|1|0.12|  
+|2|0.10|  
+|3|0.10|  
+|4|0.04|  
+|5|0.04|  
+|6|0.04|  
+|7|0.10|  
+|8|0.10|  
+|9|0.06|  
+|10|0.10|  
+
 $h_1 = .12 - 0.0$ $h_1 = .12$    
 $h_2 = .22 - 0.12$ $h_2 = .10$  
 $h_3 = .32 - 0.22$ $h_3 = .10$  
@@ -115,7 +117,7 @@ $I = \frac{.12}{8} * (1.743393 + 3(2.074903) + 3(2.456000) + 2.842985)$
 $I_3 = 0.272686$  
 ### Trapezoid Rule
 $h_n = \Delta x of the interval.  
-$\huge I = h_1 * (\frac{f(x_0)+f(x_1)}{2}) + h_2 * (\frac{f(x_1)+f(x_2)}{2}) + h_3 * (\frac{f(x_2)+f(x_3)}{2}) +....+ h_n * (\frac{f(x_{n-1})+f(x_n)}{2})$   
+$I = h_1 * (\frac{f(x_0)+f(x_1)}{2}) + h_2 * (\frac{f(x_1)+f(x_2)}{2}) + h_3 * (\frac{f(x_2)+f(x_3)}{2}) +....+ h_n * (\frac{f(x_{n-1})+f(x_n)}{2})$   
 #### Interval (1,9,10)
 Use h table for the h_n value of each interval.  
 $h_1 = 0.12$  

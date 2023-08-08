@@ -8,13 +8,14 @@ From x = 0 to x=0.8
 Exact value is 1.640533
 
 ### New Equation!!
-$\huge I = h_1 * (\frac{f(x_0)+f(x_1)}{2}) + h_2 * (\frac{f(x_1)+f(x_2)}{2}) + h_3 * (\frac{f(x_2)+f(x_3)}{2}) +....+ h_n * (\frac{f(x_{n-1})+f(x_n)}{2})$ 
+$I = h_1 * (\frac{f(x_0)+f(x_1)}{2}) + h_2 * (\frac{f(x_1)+f(x_2)}{2}) + h_3 * (\frac{f(x_2)+f(x_3)}{2}) +....+ h_n * (\frac{f(x_{n-1})+f(x_n)}{2})$
 
 ## Step by Step
 
 ### New Table:
 Solve the f(x) of each x value by plugging it into our equation.
 $f(x)=0.2+25x-200x^{2}+675x^{3}-900x^{4}+400x^{5}$
+
 |i|x|f(x)|
 |-|-|-|
 |0|0.00|0.200000|
@@ -26,7 +27,7 @@ $f(x)=0.2+25x-200x^{2}+675x^{3}-900x^{4}+400x^{5}$
 |6|0.44|2.842985|
 |7|0.54|3.507297|
 |8|0.64|3.181929|
-|9|0.70|2.363000|
+|9|0.70|2.363000| 
 |10|0.80|0.232000|
 
 a few examples:  
@@ -42,7 +43,7 @@ In the past we would have an even height and then multiply the sum of all the in
 $I = \frac{h}{2}(f(x_0) + 2f(x_0 + h) + 2f(x_0 + 2h) + ... + f(x_o + n*h))$  
 Since we have unevent intervals, it is better to just take each pair of f(x)'s that serve as the boundary of each interval and multiply them by the heigh (h)/2.  
 
-$\huge I = h_1 * (\frac{f(x_0)+f(x_1)}{2}) + h_2 * (\frac{f(x_1)+f(x_2)}{2}) + h_3 * (\frac{f(x_2)+f(x_3)}{2}) +....+ h_n * (\frac{f(x_{n-1})+f(x_n)}{2})$  
+$I = h_1 * (\frac{f(x_0)+f(x_1)}{2}) + h_2 * (\frac{f(x_1)+f(x_2)}{2}) + h_3 * (\frac{f(x_2)+f(x_3)}{2}) +....+ h_n * (\frac{f(x_{n-1})+f(x_n)}{2})$  
 
 Important to note that $\huge h = \Delta x$  
 Now that height is not uniform we have to create multiple instances of height, h.
@@ -50,18 +51,18 @@ $h_1 = \Delta x$ of the first interval. First two x values.
 $h_2 = \Delta x$ of the second interval. Second and third x value.  
 $h_3 = \Delta x$ of the third interval. Third and fourth x value.  
 Repeat for all x values.  
-|$h_i$|$\Delta X$|
-|-|-|
-|1|0.12|
-|2|0.10|
-|3|0.10|
-|4|0.04|
-|5|0.04|
-|6|0.04|
-|7|0.10|
-|8|0.10|
-|9|0.06|
-|10|0.10|
+|$h_i$|$\Delta X$|  
+|-|-|  
+|1|0.12|  
+|2|0.10|  
+|3|0.10|  
+|4|0.04|  
+|5|0.04|  
+|6|0.04|  
+|7|0.10|  
+|8|0.10|  
+|9|0.06|  
+|10|0.10|  
 $h_1 = .12 - 0.0$ $h_1 = .12$    
 $h_2 = .22 - 0.12$ $h_2 = .10$  
 $h_3 = .32 - 0.22$ $h_3 = .10$  
@@ -70,7 +71,7 @@ etc...
 
 #### Now to put it all together. Using both our tables to fill in the formula.  
 
-$\huge I = 0.12 * \frac{0.2 + 1.309729}{2} + 0.10 * \frac{1.309729 + 1.305241}{2} + 0.10 * \frac{1.305241 + 1.743393}{2} + 0.04 * \frac{1.743393 + 2.074903}{2} + 0.04 * \frac{2.074903 + 2.456000}{2} + 0.04 * \frac{2.456000 + 2.842985}{2} + 0.10 * \frac{2.842985 + 3.507297}{2} + 0.10 * \frac{3.507297 + 3.181929}{2} + 0.06 * \frac{3.181929 + 2.363000}{2} + 0.10 * \frac{2.363000 + 0.232000}{2}$  
+$I = 0.12 * \frac{0.2 + 1.309729}{2} + 0.10 * \frac{1.309729 + 1.305241}{2} + 0.10 * \frac{1.305241 + 1.743393}{2} + 0.04 * \frac{1.743393 + 2.074903}{2} + 0.04 * \frac{2.074903 + 2.456000}{2} + 0.04 * \frac{2.456000 + 2.842985}{2} + 0.10 * \frac{2.842985 + 3.507297}{2} + 0.10 * \frac{3.507297 + 3.181929}{2} + 0.06 * \frac{3.181929 + 2.363000}{2} + 0.10 * \frac{2.363000 + 0.232000}{2}$  
 
 Simplifying with h/2
 
