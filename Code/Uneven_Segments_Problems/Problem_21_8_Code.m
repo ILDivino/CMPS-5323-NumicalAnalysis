@@ -26,7 +26,7 @@ h = [];
 display("We ought to plus each of these into our starting equation to get our f(x), y, values.\n")
 #filling up our f(x), y table
 for i = 1:length(x)
-  printf("f(x_%d) = \n", i)
+  printf("f(%d) = \n", x(i))
   F_X = Function_X(x(i))
   y = [y F_X];
 endfor
@@ -53,7 +53,7 @@ I = [];
 i = 1;
 #comparisons are weird and I am getting extremely small errors causing comparisons to fail.
 #so I am adding a tolerance to remove this.
-TOLERANCE = 0.000001
+TOLERANCE = 0.000001;
 #we are going to process our intervals using the h table as our main focus.
 #this is important as we now have to look into the future h values to see if we find matching.
 #values as that will determine what kind of equation we use to process the area of the intervals involved.
@@ -62,7 +62,7 @@ TOLERANCE = 0.000001
 #k is to index future h values.
 #j is to keep track of how many matching consecutive values we find.
 while i <= length(h)
-  i
+  printf("\nh_%d\n",i)
   current_h = h(i);
   k = i + 1;
   j = 1;
@@ -74,7 +74,7 @@ while i <= length(h)
   if j >= 3
     i = i + 3;
     #do 3/8 rule
-    display("3/8!!!\n")
+    printf("3/8, h values: %d, %d, %d!!!\n",i-3,i-2,i-1)
     Delta_X = (x(i) - x(i-3))/3;
     Area = (Delta_X * (3/8))*(y(i)+3*y(i-1)+3*y(i-2)+y(i-3))
     I = [I Area];
@@ -84,13 +84,13 @@ while i <= length(h)
     Area = (Delta_X/6)*(y(i)+4*y(i-1)+y(i-2))
     I = [I Area];
     #do 1/3 rule
-    display("1/3!!!\n")
+    printf("1/3, h values: %d, %d!!!\n",i-2,i-1)
   else
     Delta_X = (x(i+1) - x(i));
     Area = (Delta_X/2)*(y(i+1)+y(i))
     I = [I Area];
     #do trapezoid rule
-    display("Trapezoid!!!!\n")
+    printf("Trapezoid, h value: %d\n",i)
     i = i+1;
   endif
 endwhile

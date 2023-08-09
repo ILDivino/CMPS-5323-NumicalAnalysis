@@ -25,7 +25,7 @@ h = [];
 display("We ought to put each of these into our starting equation to get our f(x), y, values.\n")
 #filling up our f(x), y table
 for i = 1:length(x)
-  printf("f(x_%d) = \n", i)
+  printf("f(%d) = \n", x(i))
   F_X = Function_X(x(i))
   y = [y F_X];
 endfor
@@ -33,7 +33,7 @@ display("The f(x), y value, table is as such:\n")
 y
 #now we want our h value table.
 display("Height is our delta x for each interval, each consecutive pair of x values.\n")
-display("h_n) = x(n+1) - x(n)\n")
+display("h_n = x(n+1) - x(n)\n")
 for i = 2:length(x)
   printf("h_%d = x(%d) - x(%d)\n", (i-1), i, (i-1))
   x(i)
@@ -49,10 +49,11 @@ I = 0;
 #our equation is very simple and can be processed in chunks that is what this is doing.
 #processing an interval at a time until we process all intervals.
 for i = 1:length(h)
+  printf("\nInterval #%d!!!\n",i)
   Interval_Area = h(i) * (y(i) + y(i+1))/2
   I = I + Interval_Area
 endfor
-display("Now to check our error.\n")
+display("\nNow to check our error.\n")
 display("Error = |(Real - approximated)/Real|*100\n")
 Real = 1.640533
 Error = abs((Real-I)/Real)*100
